@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		B40C0CDA250A424F001BA16D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40C0CD8250A424F001BA16D /* LaunchScreen.storyboard */; };
 		B40C0CE3250A55EA001BA16D /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40C0CE2250A55EA001BA16D /* CategoryTableViewController.swift */; };
 		B40C0CE6250A55FB001BA16D /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40C0CE5250A55FB001BA16D /* ItemTableViewController.swift */; };
+		B47B2981250A6703001259E0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B2980250A6703001259E0 /* Item.swift */; };
+		B4CE7105250A656E00103B93 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CE7104250A656E00103B93 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		B40C0CDB250A424F001BA16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40C0CE2250A55EA001BA16D /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B40C0CE5250A55FB001BA16D /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		B44DA1D7250A65C20097305E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B47B2980250A6703001259E0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B4CE7104250A656E00103B93 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F9AC3FB5CB8F56800B307AA7 /* Pods_Todoey_Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey_Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,13 +55,13 @@
 				A53535F3E32673693D9C437A /* Pods-Todoey-Realm.debug.xcconfig */,
 				583E56C05953A92503C9303E /* Pods-Todoey-Realm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		B40C0CC1250A424C001BA16D = {
 			isa = PBXGroup;
 			children = (
+				B44DA1D7250A65C20097305E /* README.md */,
 				B40C0CCC250A424C001BA16D /* Todoey-Realm */,
 				B40C0CCB250A424C001BA16D /* Products */,
 				69A9D44B21D50C97EE4849CA /* Pods */,
@@ -77,6 +82,7 @@
 			children = (
 				B40C0CCD250A424C001BA16D /* AppDelegate.swift */,
 				B40C0CCF250A424C001BA16D /* SceneDelegate.swift */,
+				B4CE7106250A657100103B93 /* Data Models */,
 				B40C0CE4250A55EE001BA16D /* Controllers */,
 				B40C0CE1250A55BE001BA16D /* Storyboards */,
 				B40C0CD6250A424F001BA16D /* Assets.xcassets */,
@@ -101,6 +107,15 @@
 				B40C0CE5250A55FB001BA16D /* ItemTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4CE7106250A657100103B93 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4CE7104250A656E00103B93 /* Category.swift */,
+				B47B2980250A6703001259E0 /* Item.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 		FA325EBD7D5E4B027591F834 /* Frameworks */ = {
@@ -227,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B40C0CCE250A424C001BA16D /* AppDelegate.swift in Sources */,
+				B4CE7105250A656E00103B93 /* Category.swift in Sources */,
 				B40C0CD0250A424C001BA16D /* SceneDelegate.swift in Sources */,
 				B40C0CE6250A55FB001BA16D /* ItemTableViewController.swift in Sources */,
+				B47B2981250A6703001259E0 /* Item.swift in Sources */,
 				B40C0CE3250A55EA001BA16D /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
