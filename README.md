@@ -4,7 +4,8 @@ A Todo list application with sublist functionality using Realm.
 <br>This application is part of <a href="https://www.udemy.com/course/ios-13-app-development-bootcamp/">iOS Application Bootcamp</a> course by Dr. Angela Yu, <a href="https://www.appbrewery.co">TheAppBrewery</a>.
 
 ## Screenshots
-<img src="Screenshots/CategoryScene.png" width="200"> <img src="Screenshots/AddNewCategoryScene.png" width="200"> <img src="Screenshots/ItemsScene.png" width="200"> <img src="Screenshots/AddNewItemScene.png" width="200">
+<img src="Screenshots/CategorySceneLight.png" width="200"> <img src="Screenshots/AddNewCategorySceneLight.png" width="200"> <img src="Screenshots/ItemsSceneLight.png" width="200"> <img src="Screenshots/AddNewItemSceneLight.png" width="200">
+<img src="Screenshots/CategorySceneDark.png" width="200"> <img src="Screenshots/AddNewCategorySceneDark.png" width="200"> <img src="Screenshots/ItemsSceneDark.png" width="200"> <img src="Screenshots/AddNewItemSceneDark.png" width="200">
 
 ## Technologies
 - <a href="http://developer.apple.com/documentation/swift"> Swift Programming Language </a>

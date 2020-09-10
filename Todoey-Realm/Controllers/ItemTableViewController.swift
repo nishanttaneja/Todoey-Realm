@@ -14,7 +14,7 @@ class ItemTableViewController: UITableViewController {
     let realm = try! Realm()
     var items: Results<Item>?
     var parentCategory: Category? {
-        didSet {loadItems()}
+        didSet {navigationItem.title = parentCategory?.name; loadItems()}
     }
     
     //MARK:- IBAction
