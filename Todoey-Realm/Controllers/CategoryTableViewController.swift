@@ -61,7 +61,12 @@ class CategoryTableViewController: UITableViewController {
     }
     /// This function is executed to save data.
     private func saveCategory(_ category: Category) {
-        do {try realm.write{realm.add(category)}}
+        do {
+            try realm.write{
+                realm.add(category)
+            }
+            tableView.reloadData()
+        }
         catch {print(error)}
     }
 }
