@@ -21,7 +21,21 @@ class CategoryTableViewController: UITableViewController {
     }
     
     //MARK:- IBAction
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {}
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add", style: .default) { (alertAction) in
+            let newCategory = Category()
+            newCategory.name = textField.text!
+            self.saveCategory(newCategory)
+        }
+        alert.addAction(action)
+        alert.addTextField { (alertTextField) in
+            textField = alertTextField
+            textField.placeholder = "New Category"
+        }
+        present(alert, animated: true, completion: nil)
+    }
     
     //MARK:- TableView DataSource|Delegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,5 +58,10 @@ class CategoryTableViewController: UITableViewController {
     private func loadCategories() {
         categories = realm.objects(Category.self)
         tableView.reloadData()
+    }
+    /// This function is executed to save data.
+    private func saveCategory(_ category: Category) {
+        do {try realm.write{realm.add(category)}}
+        catch {print(error)}
     }
 }
