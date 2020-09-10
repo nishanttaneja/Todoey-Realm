@@ -51,7 +51,10 @@ class CategoryTableViewController: UITableViewController {
     }
     
     //MARK:- Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let itemTableViewController = segue.destination as? ItemTableViewController else {fatalError()}
+        itemTableViewController.parentCategory = categories?[tableView.indexPathForSelectedRow!.row]
+    }
     
     //MARK:- Realm CRUD
     /// This function is executed to load data.
