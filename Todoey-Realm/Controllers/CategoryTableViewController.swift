@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CategoryTableViewController: UITableViewController {
+    //MARK:- Constant|Variable
+    let realm = try! Realm()
+    
     //MARK:- IBAction
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {}
     
