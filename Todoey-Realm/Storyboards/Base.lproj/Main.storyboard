@@ -9,7 +9,7 @@
         <!--Category-->
         <scene sceneID="bxb-fA-xmw">
             <objects>
-                <tableViewController title="Category" id="d6s-W2-UnD" sceneMemberID="viewController">
+                <tableViewController title="Category" id="d6s-W2-UnD" customClass="CategoryTableViewController" customModule="Todoey_Realm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hOI-j5-pGD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Todoey" largeTitleDisplayMode="always" id="hK5-Mt-4co">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="KXd-Yy-SGD"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="KXd-Yy-SGD">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="d6s-W2-UnD" id="DvN-eB-QpJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="STj-4R-W93" kind="show" identifier="CategoryToItemScene" id="bDt-t5-YUE"/>
@@ -43,7 +47,7 @@
         <!--Item-->
         <scene sceneID="9w3-zt-8vy">
             <objects>
-                <tableViewController title="Item" id="STj-4R-W93" sceneMemberID="viewController">
+                <tableViewController title="Item" id="STj-4R-W93" customClass="ItemTableViewController" customModule="Todoey_Realm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PZI-UL-tnc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +68,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Category" id="mFO-od-vVw">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="h8b-CK-Pta"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="h8b-CK-Pta">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="STj-4R-W93" id="7lS-zt-Xpc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSY-S8-Lzx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
