@@ -70,16 +70,6 @@ class ItemTableViewController: UITableViewController {
     }
     
     //MARK:- Realm CRUD
-    /// This function saves new data.
-    private func saveItem(_ item: Item) {
-        do {
-            try realm.write {
-                realm.add(item)
-            }
-            tableView.reloadData()
-        }
-        catch {print(error)}
-    }
     /// This function loads data.
     private func loadItems() {
         items = parentCategory?.items.sorted(byKeyPath: "title", ascending: true)
